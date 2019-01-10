@@ -1,2 +1,2 @@
 # robot-code
-Team 7870's code for FRCs
+Team 7870's code for the 2019 FRC competition.
