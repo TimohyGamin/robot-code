@@ -1,6 +1,6 @@
 ### Summary 
 ---
-<!-- 
+<!--
 A summary of your changes e.g. "Fixed the robot not extending the cargo all the way" 
 -->
 
@@ -28,4 +28,5 @@ List any other methods and explain why you chose this one
 ---
 <!--
 Is there anything else you need to add?
+This field is not required
 -->
