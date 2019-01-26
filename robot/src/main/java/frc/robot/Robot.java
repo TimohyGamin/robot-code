@@ -37,6 +37,7 @@ public class Robot extends TimedRobot {
 
   private Joystick joystick = new Joystick(0);
   private PWMVictorSPX[] motors = {new PWMVictorSPX(0), new PWMVictorSPX(1), new PWMVictorSPX(2), new PWMVictorSPX(3)};
+  private Double JoystickSensitivity = 1.0;
 
   @Override
   public void robotInit() {
@@ -96,8 +97,9 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void teleopPeriodic() {
-   Double yOrientation = joystick.getY();
-   Double xOrientation = joystick.getX();
+   JoystickSensitivity = ((-joystick.getThrottle())+1)/2;
+   Double yOrientation = joystick.getY()*JoystickSensitivity;
+   Double xOrientation = joystick.getX()*JoystickSensitivity;
    motors[0].set(-yOrientation+xOrientation);
    motors[1].set(-yOrientation+xOrientation);
    motors[2].set(yOrientation+xOrientation);
